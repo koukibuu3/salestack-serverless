@@ -19,6 +19,13 @@ functions:
                 path: /reports
                 method: post
 
+resources:
+  Resources:
+    Storage:
+      Type: AWS::S3::Bucket
+      Properties:
+        BucketName: ${self:service}-${self:provider.stage}-serverless
+
 # Exclude files from deployment
 package:
     patterns:
