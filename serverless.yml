@@ -1,4 +1,4 @@
-service: salestack
+service: salestack-reports
 
 provider:
     name: aws
@@ -10,9 +10,9 @@ plugins:
     - ./vendor/bref/bref
 
 functions:
-    report-api:
+    api:
         handler: index.php
-        description: ''
+        name: ${self:service}-api-${self:provider.stage}
         runtime: php-82
         events:
             - httpApi:
@@ -24,7 +24,7 @@ resources:
         Storage:
             Type: AWS::S3::Bucket
             Properties:
-                BucketName: ${self:service}-${self:provider.stage}-serverless
+                BucketName: ${self:service}-storage-${self:provider.stage}
 
 # Exclude files from deployment
 package:
