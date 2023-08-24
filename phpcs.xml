@@ -10,13 +10,6 @@
     <exclude name="Generic.ControlStructures.InlineControlStructure" />
   </rule>
 
-  <!-- インデントを2に指定 -->
-  <rule ref="Generic.WhiteSpace.ScopeIndent">
-    <properties>
-      <property name="indent" value="2" />
-    </properties>
-  </rule>
-
   <!-- 出力に色を適用 -->
   <arg name="colors" />
 
