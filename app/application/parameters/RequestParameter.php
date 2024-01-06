@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Modules\ValueObjects\Parameter;
+namespace App\Application\Parameters;
 
 use InvalidArgumentException;
 
