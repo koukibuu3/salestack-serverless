@@ -1,10 +1,10 @@
 {
     "autoload": {
         "classmap": [
-            "src/"
+            "app/"
         ],
         "psr-4": {
-            "Src\\": "src/",
+            "App\\": "app/",
             "Tests\\": "tests/"
         }
     },
